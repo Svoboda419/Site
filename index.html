@@ -1,66 +1,334 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Resume</title>
-    </head>
-    <body>
-        <table cellspacing="15">
-            <tr>
-                <td><img src="https://i.pinimg.com/736x/a8/be/27/a8be276fad972e0788327d7ca163da00.jpg" alt="Avatar" width="300"></td>
-                <td>
-                    <h1>Dopamine</h1>
-                    <p><em>Student of <strong>Stavropol Colledge of Communication</strong></em></p>
-                    <p>I like to play games and do Web-Design as well!</p>
-                </td>
-            </tr>
-        </table>
-        
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BizTransform - Консалтинг и трансформация бизнеса</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar">
+            <a href="#" class="logo">BizTransform</a>
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu"></button>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#services" class="nav-link dropdown-toggle">Услуги</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#services" class="dropdown-item">🔄 Трансформация бизнеса</a></li>
+                        <li><a href="#services" class="dropdown-item">🤖 Автоматизация и AI</a></li>
+                        <li><a href="#services" class="dropdown-item">👥 Управление персоналом</a></li>
+                        <li><a href="#services" class="dropdown-item">🚀 Карьерный коучинг</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a href="#cases" class="nav-link">Кейсы</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#team" class="nav-link">Эксперты</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Контакты</a>
+                </li>
+            </ul>
+            <button class="cta-button" onclick="openModal()" aria-label="Open consultation form">Консультация</button>
+        </nav>
+    </header>
 
-        <hr>
-        <h3>My social media</h3>
-        <ul>
-            <li><a href="https://t.me/asthmaboyz" target="_blank">Telegram</a></li>
-        </ul>
-        <hr>
-        <h3>My hobbies</h3>
-        <ol>
-            <li>Video Games</li>
-            <li>Playing on Guitar</li>
-        </ol>
-        <hr>
-        <h3>My portfolio!</h3>
-        <table>
-            <tr>
-                <th>Site</th>
-                <th>Link</th>
-            </tr>
-            <tr>
-                <td>Telegram</td>
-                <td><a href="">Link</a></td>
-            </tr>
-            <tr>
-                <td>Dribbble</td>
-                <td><a href="">Link</a></td>
-            </tr>
-        </table>
-        <hr>
-        <h2>Courses</h2>
-        <a href="courses.html">Click on me!</a>
-        <hr>
-        <h2>Write me!</h2>
-        <form action="/">
-            <label for="name">Name:</label>
-            <input type="text" id="name" placeholder="Start write your name!..">
-            <br>
-            <label for="email">Email:</label>
-            <input type="email" id="email" placeholder="Start write your email!..">
-            <br>
-            <label for="text">Message:</label>
-            <br>
-            <textarea id="" rows="2" cols="15"></textarea>
-            <br>
-            <input type="submit" value="Send!">
-        </form>
-    </body>
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Трансформируйте ваш бизнес вместе с нами</h1>
+            <p>Комплексные решения для автоматизации, развития персонала и стратегического роста компании</p>
+            <div class="hero-buttons">
+                <button class="btn-primary" onclick="scrollTo('services')">Посмотреть услуги</button>
+                <button class="btn-secondary" onclick="openModal()">Запросить консультацию</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services-section" id="services">
+        <h2 class="section-title">Наши решения для вашего бизнеса</h2>
+        <p class="section-subtitle">Комплексный подход к трансформации компании через проверенные методологии</p>
+
+        <div class="services-grid">
+            <div class="service-card fade-in delay-1">
+                <span class="service-icon">🔄</span>
+                <h3>Трансформация бизнеса</h3>
+                <p>Комплексная диагностика, стратегия изменений и внедрение новых подходов к управлению</p>
+                <ul class="service-features">
+                    <li>Check-Up и диагностика</li>
+                    <li>Стратегические сессии</li>
+                    <li>Бизнес-коучинг</li>
+                    <li>Налоговая оптимизация</li>
+                </ul>
+                <a href="#" class="service-link">Узнать больше →</a>
+            </div>
+
+            <div class="service-card fade-in delay-2">
+                <span class="service-icon">🤖</span>
+                <h3>Автоматизация и AI</h3>
+                <p>Внедрение современных систем управления, CRM, ERP и искусственного интеллекта</p>
+                <ul class="service-features">
+                    <li>CRM/ERP/СЭД</li>
+                    <li>Автоматизация процессов</li>
+                    <li>Электронный документооборот</li>
+                    <li>AI для документации</li>
+                </ul>
+                <a href="#" class="service-link">Узнать больше →</a>
+            </div>
+
+            <div class="service-card fade-in delay-3">
+                <span class="service-icon">👥</span>
+                <h3>Управление персоналом</h3>
+                <p>Подбор, оценка, развитие команды и создание системы мотивации сотрудников</p>
+                <ul class="service-features">
+                    <li>Подбор персонала</li>
+                    <li>Оценка компетенций</li>
+                    <li>Система KPI/OKR</li>
+                    <li>Оргдизайн</li>
+                </ul>
+                <a href="#" class="service-link">Узнать больше →</a>
+            </div>
+
+            <div class="service-card fade-in delay-4">
+                <span class="service-icon">🚀</span>
+                <h3>Карьерный коучинг</h3>
+                <p>Помощь в развитии карьеры, подготовке к собеседованиям и адаптации на новой должности</p>
+                <ul class="service-features">
+                    <li>Карьерное планирование</li>
+                    <li>Подготовка CV</li>
+                    <li>Коучинг при интервью</li>
+                    <li>Адаптация на должности</li>
+                </ul>
+                <a href="#" class="service-link">Узнать больше →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats-section">
+        <div class="stats-grid">
+            <div class="stat-item">
+                <h4>500+</h4>
+                <p>Компаний трансформировано</p>
+            </div>
+            <div class="stat-item">
+                <h4>15+</h4>
+                <p>Лет опыта</p>
+            </div>
+            <div class="stat-item">
+                <h4>92%</h4>
+                <p>Успешно завершенных проектов</p>
+            </div>
+            <div class="stat-item">
+                <h4>125M+</h4>
+                <p>Прибыли клиентов увеличено</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASES -->
+    <section class="cases-section" id="cases">
+        <h2 class="section-title">Истории успеха наших клиентов</h2>
+        <p class="section-subtitle">Реальные результаты работы с компаниями разных масштабов и отраслей</p>
+
+        <div class="cases-grid">
+            <div class="case-card fade-in delay-1">
+                <div class="case-header">
+                    <div class="case-category">Производство</div>
+                    <div class="case-title">Оптимизация производства и снижение затрат</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">45%</div>
+                            <div class="metric-label">Снижение затрат</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">3 мес</div>
+                            <div class="metric-label">Внедрение</div>
+                        </div>
+                    </div>
+                    <p class="case-description">Внедрили систему управления производством и автоматизировали 70% процессов. Результат: снижение операционных расходов на 45% при сохранении качества.</p>
+                    <a href="#" class="read-more">Прочитать кейс →</a>
+                </div>
+            </div>
+
+            <div class="case-card fade-in delay-2">
+                <div class="case-header">
+                    <div class="case-category">IT-компания</div>
+                    <div class="case-title">Масштабирование команды с 50 до 200 человек</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">4x</div>
+                            <div class="metric-label">Рост команды</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">6 мес</div>
+                            <div class="metric-label">Процесс</div>
+                        </div>
+                    </div>
+                    <p class="case-description">Разработали систему подбора, адаптации и развития. Компания успешно увеличила команду на 300% без потери культуры и производительности.</p>
+                    <a href="#" class="read-more">Прочитать кейс →</a>
+                </div>
+            </div>
+
+            <div class="case-card fade-in delay-3">
+                <div class="case-header">
+                    <div class="case-category">Логистика</div>
+                    <div class="case-title">Автоматизация логистических процессов</div>
+                </div>
+                <div class="case-body">
+                    <div class="case-metrics">
+                        <div class="metric">
+                            <div class="metric-value">38%</div>
+                            <div class="metric-label">Рост эффективности</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-value">2 мес</div>
+                            <div class="metric-label">ROI</div>
+                        </div>
+                    </div>
+                    <p class="case-description">Внедрили WMS и систему управления перевозками. Компания достигла окупаемости инвестиций за 2 месяца и повысила пропускную способность на 38%.</p>
+                    <a href="#" class="read-more">Прочитать кейс →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERTS -->
+    <section class="experts-section" id="team">
+        <h2 class="section-title">Встречайте нашу команду экспертов</h2>
+        <p class="section-subtitle">Профессионалы с десятилетиями опыта в трансформации бизнеса</p>
+
+        <div class="experts-grid">
+            <div class="expert-card fade-in delay-1">
+                <div class="expert-avatar">👔</div>
+                <h4>Виктор Петров</h4>
+                <div class="expert-role">Директор по трансформации</div>
+                <p class="expert-bio">15 лет в консалтинге, помощь 200+ компаниям в трансформации бизнес-процессов</p>
+            </div>
+
+            <div class="expert-card fade-in delay-2">
+                <div class="expert-avatar">💻</div>
+                <h4>Мария Иванова</h4>
+                <div class="expert-role">Директор по IT</div>
+                <p class="expert-bio">CTO в крупных корпорациях, специалист по внедрению ERP и CRM систем</p>
+            </div>
+
+            <div class="expert-card fade-in delay-3">
+                <div class="expert-avatar">👨‍💼</div>
+                <h4>Алексей Сидоров</h4>
+                <div class="expert-role">HR-консультант</div>
+                <p class="expert-bio">Специалист по организационному развитию и подбору ключевых кадров</p>
+            </div>
+
+            <div class="expert-card fade-in delay-4">
+                <div class="expert-avatar">🎯</div>
+                <h4>Елена Морозова</h4>
+                <div class="expert-role">Бизнес-тренер</div>
+                <p class="expert-bio">Коуч 50+ руководителей, специалист по развитию лидерских навыков</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <h2>Готовы начать трансформацию?</h2>
+        <p>Получите персональную диагностику вашего бизнеса и рекомендации от наших экспертов</p>
+        <button class="btn-primary" onclick="openModal()">Запросить консультацию</button>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>О компании</h4>
+                <ul class="footer-links">
+                    <li><a href="#" tabindex="0">Наша миссия</a></li>
+                    <li><a href="#" tabindex="0">История компании</a></li>
+                    <li><a href="#" tabindex="0">Ценности</a></li>
+                    <li><a href="#" tabindex="0">Вакансии</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Услуги</h4>
+                <ul class="footer-links">
+                    <li><a href="#services">Трансформация бизнеса</a></li>
+                    <li><a href="#services">Автоматизация</a></li>
+                    <li><a href="#services">HR консалтинг</a></li>
+                    <li><a href="#services">Коучинг</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>Контакты</h4>
+                <ul class="footer-links">
+                    <li><a href="mailto:info@biztransform.ru">info@biztransform.ru</a></li>
+                    <li><a href="tel:+79991234567">+7 (999) 123-45-67</a></li>
+                    <li>Москва, ул. Льва Толстого, 16</li>
+                </ul>
+                <div class="social-links">
+                    <a href="#" title="LinkedIn" aria-label="LinkedIn">in</a>
+                    <a href="#" title="Telegram" aria-label="Telegram">✈</a>
+                    <a href="#" title="WhatsApp" aria-label="WhatsApp">W</a>
+                </div>
+            </div>
+
+            <div class="footer-section">
+                <h4>Рассылка</h4>
+                <p>Получайте советы и кейсы на почту</p>
+                <form class="newsletter-form" id="newsletterForm" onsubmit="handleNewsletterSubmit(event)">
+                    <input type="email" placeholder="Ваша почта" required>
+                    <button type="submit" class="cta-button">Подписаться</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 BizTransform Consulting. Все права защищены. | <a href="#" style="color: var(--accent-light); text-decoration: none;">Политика конфиденциальности</a></p>
+        </div>
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()" aria-label="Close modal"></button>
+            <h2>Запросить консультацию</h2>
+            <p>Заполните форму и наш специалист свяжется с вами в течение 24 часов</p>
+            
+            <form onsubmit="handleFormSubmit(event)" class="consultation-form">
+                <div class="form-group">
+                    <label for="name">Ваше имя</label>
+                    <input type="text" id="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">О вашем бизнесе</label>
+                    <textarea id="message" required></textarea>
+                </div>
+
+                <button type="submit" class="form-submit">Отправить запрос</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
 </html>
